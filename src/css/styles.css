@@ -670,6 +670,101 @@ section {
     color: var(--primary);
 }
 
+/* Blog Section */
+.blog {
+    background: var(--bg-dark);
+    padding: 80px 0;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.blog-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.blog-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.blog-card h3 {
+    color: var(--primary);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.blog-card .blog-excerpt {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.blog-card .blog-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.blog-card .blog-date {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.blog-card .blog-read-time {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.blog-card .blog-link {
+    display: inline-block;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.blog-card .blog-link:hover {
+    color: var(--accent);
+    transform: translateX(5px);
+}
+
+.blog-loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--text-muted);
+    padding: 40px 20px;
+}
+
+.blog-error {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #ff6b6b;
+    padding: 40px 20px;
+}
+
 /* Footer */
 .footer {
     background: var(--bg-darker);
@@ -736,6 +831,10 @@ section {
     .resume-btn {
         padding: 6px 12px !important;
         font-size: 0.75rem !important;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
     }
 
     .hero {
